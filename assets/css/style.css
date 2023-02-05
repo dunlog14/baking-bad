@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav.header {
+    color:#fff;
+    min-height: 110vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,15,20,0.7), rgba(4,10,20,0.7)), url("../images/giphy.gif");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 25px;
+}
+
+
+h1 {
+    display: inline-flex;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+}
+
+.head-logo {
+    height: 200px;
+    width: auto;
+}
+
+.head-text {
+    font-size: 60px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 700;
+    position: relative;
+    top: 60px;
+    left: 15px;
+    color: #3393FF;
+}
+
+.menu {
+    position: relative;
+    top: 500px;
+    font-size: 26px;
+    font-weight: 800;
+    color: white;
+    font-family: 'Julius Sans One', sans-serif;
+   
+}
