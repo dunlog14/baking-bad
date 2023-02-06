@@ -7,7 +7,7 @@ nav.header {
     color:#fff;
     min-height: 110vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,15,20,0.7), rgba(4,10,20,0.7)), url("../images/giphy.gif");
+    background-image: linear-gradient(rgba(4, 15, 20, 0.6), rgba(4, 10, 20, 0.6)), url("/assets/images/hero.gif");
     background-size: cover;
     background-position: center;
     margin-bottom: 25px;
@@ -44,4 +44,13 @@ h1 {
     color: white;
     font-family: 'Julius Sans One', sans-serif;
    
+}
+
+.easter-egg {
+    position: absolute;
+    top:5px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    z-index: 2;
 }
