@@ -5,6 +5,8 @@ $(document).ready(function(){
 let rawgKey = '576858f4b6fa477990afac4add5f794f';
 
 function halo1() {
+    let youtubeUrl = `https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU
+    &part=snippet,contentDetails,statistics,status`;
 
     var requestUrl = 'https://api.rawg.io/api/games/halo-combat-evolved?key=576858f4b6fa477990afac4add5f794f';
   
@@ -13,7 +15,7 @@ function halo1() {
         return response.json();
       })
       .then(function (data) {
-        // console.log(data);
+        console.log(data);
         console.log(data.name);
         console.log(data.metacritic);
         console.log(data.description);
@@ -21,12 +23,13 @@ function halo1() {
 
     let oneHead = $('.one');
     let oneDescription = $('.game-description-1');
+    let oneVideo = $('.video');
  
     let oneTitle = data.name;
         oneHead.append(oneTitle);
     let oneAbout = data.description;
         oneDescription.append(oneAbout);
-
+    let oneYouTube = video.list;
   
         
 });
@@ -129,6 +132,11 @@ function halo1() {
     halo4();
     halo5();
     haloInfinite();
+
+    let fiveForecastEl = $('.fiveForecast');
+
+// displays the five day forecast with temperature, wind speed, and humidity
+
 // function to play theme song (EASTER EGG)
 function PlaySound(soundobj) {
     var thissound=document.getElementById('mySound');
