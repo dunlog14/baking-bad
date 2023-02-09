@@ -133,10 +133,6 @@ function halo1() {
     halo5();
     haloInfinite();
 
-    let fiveForecastEl = $('.fiveForecast');
-
-// displays the five day forecast with temperature, wind speed, and humidity
-
 // function to play theme song (EASTER EGG)
 function PlaySound(soundobj) {
     var thissound=document.getElementById('mySound');
