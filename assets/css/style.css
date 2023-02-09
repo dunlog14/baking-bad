@@ -7,7 +7,7 @@ nav.header {
     color:#fff;
     min-height: 110vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 15, 20, 0.6), rgba(4, 10, 20, 0.6)), url("/assets/images/hero.gif");
+    background-image: linear-gradient(rgba(4, 15, 20, 0.6), rgba(4, 10, 20, 0.6)), url("../images/hero.gif");
     background-size: cover;
     background-position: center;
     margin-bottom: 25px;
@@ -59,3 +59,9 @@ h1 {
 .collection {
     display: inline-flex;
 }
+
+.waves-effect {
+    width: 100% !important;
+    height:100% !important;
+}
+
