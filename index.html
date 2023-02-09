@@ -7,29 +7,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/foundation.css">
-    <link rel="stylesheet" href="/assets/css/foundation.min.css">
-    <title>Halo Origins</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Halo Origins.</title>
 </head>
 <body>
     <body>
     <header>
+            
+        <div>
+            <img class="easter-egg" onmouseover="PlaySound('mySound')" onmouseout="StopSound('mySound')" src="./assets/images/marathon.jpg">
+            <audio id="mySound" src="./assets/mp3/01 Halo Theme Mjolnir Mix.mp3"></audio>
+        </div>
         <nav class="header">
-
-            <ul class="vertical menu">
-                <li><a href="#">Halo: Combat Evolved</a></li>
-                <li><a href="#">Halo 2</a></li>
-                <li><a href="#">Halo 3</a></li>
-                <li><a href="#">Halo 4</a></li>
-                <li><a href="#">Halo 5</a></li>
-                <li><a href="#">Halo Infinite</a></li>
-              </ul>
 
             <div class="text-box">
                 <h1>
                     <div>
-                        <img class="head-logo" src="./assets/images/Halo-Logo-500x281.png" alt="halo logo">
+                        <img  class="head-logo" src="./assets/images/Halo-Logo-500x281.png" alt="halo logo">
                     </div>
                     <div class="head-text">Origins</div>
                 </h1>      
@@ -37,15 +32,44 @@
         </nav>
     </header>
 
-    <div id="combat-evolved" class="combat-evolved">
-        <p class="game-info">Halo: Combat Evolved</p>
-    </div>
+    <ul class="collection">
+      <li id="1" class="collection-item avatar">
+        <img src="./assets/images/halo-combat.jpg" alt="combat-evolved" class="square">
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>
+      </li>
+
+      <li id="2" class="collection-item avatar">
+        <img src="./assets/images/halo-2.jpg" alt="halo 2">
+      </li>
+
+      <li id="3" class="collection-item avatar">
+        <img src="./assets/images/halo-3.jpg">
+      </li>
+
+      <li id="4" class="collection-item avatar">
+        <img src="./assets/images/halo-4.jpg">
+      </li>
+
+      <li id="5" class="collection-item avatar">
+        <img src="./assets/images/halo-5.jpg">
+      </li>
+
+      <li id="6" class="collection-item avatar">
+        <img src="./assets/images/halo-in.jpg">
+      </li>
+    </ul>
     
-    <script src="./assets/js/vendor/jquery.js"></script> <!-- Required -->
-    <script src="./assets/js/vendor/foundation.min.js"></script>  <!-- Required -->
-    <script src="./assets/js/vendor/foundation.js"></script>
-    <script src="./assets/js/vendor/what-input.js"></script>
-    <script src="./assets/js/vendor/what-input.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 </html>
