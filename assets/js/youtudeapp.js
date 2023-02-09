@@ -1,5 +1,5 @@
 // This javascript is the interface to the YouTube v3 Data API for the baking-bad 
-// project.
+// project. Please merge
 
 // From the Main javascript Halo video game homepage, this code returns the url to 
 // a Official YouTube video trailer for the user selected Halo video game.
