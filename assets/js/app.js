@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         games = await fetchData();
     } catch (e) {
-        console.log("Error!");
-        console.log(e);
+        // console.log("Error!");
+        // console.log(e);
     }
     console.log(games);
 });
