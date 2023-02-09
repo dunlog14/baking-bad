@@ -1,4 +1,4 @@
-// This javascript is the interface to the YouTube v3 Data API for the bbaking-bad 
+// This javascript is the interface to the YouTube v3 Data API for the baking-bad 
 // project.
 
 // From the Main javascript Halo video game homepage, this code returns the url to 
