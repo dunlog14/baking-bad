@@ -67,6 +67,7 @@ h1 {
 
 .s1 {
     display: inline-flex;
+    background-image: url('../images/halo-ring.jpg');
 }
 
 .grow {
