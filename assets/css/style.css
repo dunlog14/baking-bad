@@ -4,13 +4,12 @@
 }
 
 nav.header {
-    color:#fff;
+    color:#ffffff;
     min-height: 110vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,15,20,0.7), rgba(4,10,20,0.7)), url("../images/giphy.gif");
+    background-image: linear-gradient(rgba(4, 15, 20, 0.6), rgba(4, 10, 20, 0.6)), url("../images/hero.gif");
     background-size: cover;
     background-position: center;
-    margin-bottom: 25px;
 }
 
 
@@ -20,6 +19,8 @@ h1 {
     right: 200px;
     top: 100px;
 }
+
+
 
 .head-logo {
     height: 200px;
@@ -31,7 +32,7 @@ h1 {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 700;
     position: relative;
-    top: 60px;
+    top: 65px;
     left: 15px;
     color: #3393FF;
 }
@@ -41,7 +42,47 @@ h1 {
     top: 500px;
     font-size: 26px;
     font-weight: 800;
-    color: white;
+    color: rgb(71, 43, 43);
     font-family: 'Julius Sans One', sans-serif;
-   
+    width: 400px;
+    
 }
+
+.easter-egg {
+    position: absolute;
+    top:5px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    z-index: 2;
+}
+
+/**/.collection {
+    display: inline-flex;
+}
+
+.grid-item {
+    display: grid;
+    column-gap: 0px;
+  }
+
+.waves-effect {
+    width: 100% !important;
+    height:100% !important;
+}
+
+.s1 {
+    display: inline-block;
+}
+
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 980px){
+    img {
+        width: 200px;}
