@@ -1,74 +1,16 @@
-<--!
-There are several ways to use the JavaScript client library to make API requests, 
-but they all follow the same basic pattern:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halo Youtube API</title>
+</head>
+<body>
+  
+</body>
+<!-- branch to cut down youtube api javascript-->
+<script src="./assets/js/youtube.js"></script>
+</html>
 
-The application loads the JavaScript client library.
-The application initializes the library with API key, OAuth client ID, and 
-API Discovery Document(s).
-The application sends a request and processes the response.
--->
 
-<--!
-Option 1: Load the API discovery document, then assemble the request.
-The following example assumes the user has already signed in. For a full example of 
-how to sign in a user, see the full auth sample.
--->
-
-
-<script src="https://apis.google.com/js/api.js"></script>
-<script>
-function start() {
-  // 2. Initialize the JavaScript client library.
-  gapi.client.init({
-    'apiKey': 'YOUR_API_KEY',
-    // Your API key will be automatically added to the Discovery Document URLs.
-    'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
-    // clientId and scope are optional if auth is not required.
-    'clientId': 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com',
-    'scope': 'profile',
-  }).then(function() {
-    // 3. Initialize and make the API request.
-    return gapi.client.people.people.get({
-      'resourceName': 'people/me',
-      'requestMask.includeField': 'person.names'
-    });
-  }).then(function(response) {
-    console.log(response.result);
-  }, function(reason) {
-    console.log('Error: ' + reason.result.error.message);
-  });
-};
-// 1. Load the JavaScript client library.
-gapi.load('client', start);
-</script>
-
-<--!
-Option 2: Use gapi.client.request
-A more general way to make requests is to use gapi.client.request. Your application does 
-not have to load the Discovery Document as in the first option, but it must still set the 
-API key (and auth for some APIs). While you need to manually fill in REST parameters with 
-this option, it saves one network request and reduces application size.
--->
-<script src="https://apis.google.com/js/api.js"></script>
-<script>
-function start() {
-  // 2. Initialize the JavaScript client library.
-  gapi.client.init({
-    'apiKey': 'YOUR_API_KEY',
-    // clientId and scope are optional if auth is not required.
-    'clientId': 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com',
-    'scope': 'profile',
-  }).then(function() {
-    // 3. Initialize and make the API request.
-    return gapi.client.request({
-      'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names',
-    })
-  }).then(function(response) {
-    console.log(response.result);
-  }, function(reason) {
-    console.log('Error: ' + reason.result.error.message);
-  });
-};
-// 1. Load the JavaScript client library.
-gapi.load('client', start);
-</script>

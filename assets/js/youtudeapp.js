@@ -1,7 +1,6 @@
-// key : AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU
-// This javascript is the interface to the YouTube v3 Data API for the baking-bad 
-// project. Please merge
 
+// This javascript is the interface to the YouTube v3 Data API for the baking-bad 
+// Project
 // From the Main javascript Halo video game homepage, this code returns the url to 
 // a Official YouTube video trailer for the user selected Halo video game.
 
@@ -61,7 +60,7 @@ btns.forEach(function(btn){
 // test url
 
 // Note key is NOT in quotes
-// https://www.googleapis.com/youtube/v3/search/?part=snippet&key=AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU&q=halo&maxResults=5'
+// https://www.googleapis.com/youtube/v3/search/?part=snippet&key=AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU&q='halo video game official trailer'&maxResults=5'
 // search YouTube database
 function ySearch(e){
    let search = searchTerm.value;
@@ -69,6 +68,8 @@ function ySearch(e){
    //encodeURlComponent(search);
    // part snippet, api, q=halo, max results 1
    // q is hardcoded with game name
+   // copied url to web browser to test. it worked!
+   // https://www.youtube.com/embed/PyMlV5_HRWk where last parameter is videoid
 let url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key=AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU&q=halo&maxResults=5';
 output.textContent = url;
 console.log(output.textContent)
