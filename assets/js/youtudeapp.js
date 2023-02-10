@@ -24,7 +24,7 @@
 
 // Using YouTube V3 Data API with public data  
 //const api = 'AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM;
-const api = 'AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM';
+const api = 'AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU';
 //console.log(api)
 // take search item from console. comment out code once integrated with project
 

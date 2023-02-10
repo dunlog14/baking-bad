@@ -5,12 +5,10 @@ $(document).ready(function(){
 let rawgKey = '576858f4b6fa477990afac4add5f794f';
 
 function halo1() {
-    let youtubeUrl = `https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU
-    &part=snippet,contentDetails,statistics,status`;
 
-    var requestUrl = 'https://api.rawg.io/api/games/halo-combat-evolved?key=576858f4b6fa477990afac4add5f794f';
+    var oneUrl = 'https://api.rawg.io/api/games/halo-combat-evolved?key=576858f4b6fa477990afac4add5f794f';
   
-    fetch(requestUrl)
+    fetch(oneUrl)
       .then(function (response) {
         return response.json();
       })
@@ -20,27 +18,25 @@ function halo1() {
         console.log(data.metacritic);
         console.log(data.description);
         console.log(data.released);
-
-    let oneHead = $('.one');
-    let oneDescription = $('.game-description-1');
-    let oneVideo = $('.video');
- 
-    let oneTitle = data.name;
-        oneHead.append(oneTitle);
-    let oneAbout = data.description;
-        oneDescription.append(oneAbout);
-    let oneYouTube = video.list;
-  
         
-});
+// let firstModal = document.getElementById('#modal1');
+// firstModal.on('click')
+
+    let oneName = $('.title-1');
+      oneName.append(data.name);
+    let oneDescription = $('.game-description-1');
+      oneDescription.append(data.description);
+    let oneMeta = $('.meta')
+      oneMeta.append(data.metacritic);
+      });
 }
 
 
   function halo2() {
 
-    var requestUrl = 'https://api.rawg.io/api/games/halo-2?key=576858f4b6fa477990afac4add5f794f';
+    var twoUrl = 'https://api.rawg.io/api/games/halo-2?key=576858f4b6fa477990afac4add5f794f';
   
-    fetch(requestUrl)
+    fetch(twoUrl)
       .then(function (response) {
         return response.json();
       })
@@ -51,17 +47,23 @@ function halo1() {
         console.log(data.description);
         console.log(data.released);
 
+        let oneName = $('.title-2');
+        oneName.append(data.name);
+      let oneDescription = $('.game-description-2');
+        oneDescription.append(data.description);
+      let oneMeta = $('.meta')
+        oneMeta.append(data.metacritic);
+});  
 
-});
 
 }     
 
     
     function halo3() {
 
-        var requestUrl = 'https://api.rawg.io/api/games/halo-3?key=576858f4b6fa477990afac4add5f794f';
+        var threeUrl = 'https://api.rawg.io/api/games/halo-3?key=576858f4b6fa477990afac4add5f794f';
       
-        fetch(requestUrl)
+        fetch(threeUrl)
           .then(function (response) {
             return response.json();
           })
@@ -72,13 +74,13 @@ function halo1() {
             console.log(data.description);
             console.log(data.released);
     });
-    }     
+    }   
 
     function halo4() {
 
-        var requestUrl = 'https://api.rawg.io/api/games/halo-4?key=576858f4b6fa477990afac4add5f794f';
+        var fourUrl = 'https://api.rawg.io/api/games/halo-4?key=576858f4b6fa477990afac4add5f794f';
       
-        fetch(requestUrl)
+        fetch(fourUrl)
           .then(function (response) {
             return response.json();
           })
@@ -93,9 +95,9 @@ function halo1() {
 
     function halo5() {
 
-        var requestUrl = 'https://api.rawg.io/api/games/halo-5-guardians?key=576858f4b6fa477990afac4add5f794f';
+        var fiveUrl = 'https://api.rawg.io/api/games/halo-5-guardians?key=576858f4b6fa477990afac4add5f794f';
       
-        fetch(requestUrl)
+        fetch(fiveUrl)
           .then(function (response) {
             return response.json();
           })
@@ -110,9 +112,9 @@ function halo1() {
 
     function haloInfinite() {
 
-        var requestUrl = 'https://api.rawg.io/api/games/halo-infinite?key=576858f4b6fa477990afac4add5f794f';
+        var sixUrl = 'https://api.rawg.io/api/games/halo-infinite?key=576858f4b6fa477990afac4add5f794f';
       
-        fetch(requestUrl)
+        fetch(sixUrl)
           .then(function (response) {
             return response.json();
           })
@@ -132,6 +134,33 @@ function halo1() {
     halo4();
     halo5();
     haloInfinite();
+
+// let gameListEl = $('.gameList');
+// function getGames() {
+// 	let getUrl = `https://api.rawg.io/api/games/halo-combat-evolved?key=576858f4b6fa477990afac4add5f794f`;
+
+// 	$.ajax({
+// 		url: getUrl,
+// 		method: 'GET',
+// 	}).then(function (response) {
+// 		let gameArray = response.name;
+//     console.log(response.list);
+// 		let myGames = [];
+// 		$.each(gameArray, function (index, value) {
+// 			objects = {
+// 				name: value.data.name,
+//         about: value.data.description,
+//         rating: value.metacritic,
+// 			}
+      
+// 				myGames.push(objects);
+//         console.log(index);
+//     });
+//   });
+// };
+
+
+// getGames();
 
 // function to play theme song (EASTER EGG)
 function PlaySound(soundobj) {
