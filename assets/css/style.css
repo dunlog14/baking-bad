@@ -7,10 +7,9 @@ nav.header {
     color:#fff;
     min-height: 110vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 15, 20, 0.6), rgba(4, 10, 20, 0.6)), url("/assets/images/hero.gif");
+    background-image: linear-gradient(rgba(4, 15, 20, 0.6), rgba(4, 10, 20, 0.6)), url("../images/hero.gif");
     background-size: cover;
     background-position: center;
-    margin-bottom: 25px;
 }
 
 
@@ -31,7 +30,7 @@ h1 {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 700;
     position: relative;
-    top: 60px;
+    top: 65px;
     left: 15px;
     color: #3393FF;
 }
@@ -58,4 +57,22 @@ h1 {
 
 .collection {
     display: inline-flex;
+}
+
+
+.waves-effect {
+    width: 100% !important;
+    height:100% !important;
+}
+
+.s1 {
+    display: inline-block;
+}
+
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
 }
