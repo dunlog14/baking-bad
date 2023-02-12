@@ -29,7 +29,7 @@
 // console.log("top of script")
 
 
-const api = 'AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU';
+const api = 'AIzaSyCAP-iPzob8qYBirex5NaZNyEAfylpjyBo';
 //console.log("key", api);
 
 // javascript overview v2 (rewritten from first pass)
@@ -64,7 +64,7 @@ const api = 'AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU';
 //console.log("gameID", gameID);
 //console.log("searchq", searchq);
 
-let watchyoutube = "";
+
 
 //if (gameID == "Halo Combat Evolved") {
 //      searchq = 'halo combat evolved full game';}
@@ -113,10 +113,14 @@ function Halo1Search(){
       fetch(url).then(function(rep){
       // convert json to javascript object
       return rep.json()
+
   }).then(function(data){
-//    console.log("youtube data", data);
-//    console.log("array 0", data.items[0]);
-      console.log("youtube video ID", data.items[0].id);
+// convert json array to something javascript can tranverse
+//     const youtubeArray = JSON.parse(data);
+//     console.log("YoutubeArray", youtubeArray);
+//     console.log("youtube data", data);
+//     console.log("array 0", data.items[0]);
+//     console.log("youtube video ID", data.items[0].id);
       videoId = 'lie_ysmcQV8';
       youtubeHalo1 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
       console.log("youtube url", youtubeHalo1);
@@ -140,7 +144,7 @@ function Halo2Search(){
   }).then(function(data){
 //    console.log("youtube data", data);
 //    console.log("array 0", data.items[0]);
-      console.log("youtube video ID", data.items[0].id);
+//    console.log("youtube video ID", data.items[0].id);
       videoId = 'rl5J-rqJa3o';
       youtubeHalo2 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
       console.log("youtube url", youtubeHalo2);
@@ -164,7 +168,7 @@ function Halo3Search(){
   }).then(function(data){
 //    console.log("youtube data", data);
 //    console.log("array 0", data.items[0]);
-      console.log("youtube video ID", data.items[0].id);
+//     console.log("youtube video ID", data.items[0].id);
       videoId = '_DtftmGZpgE';
       youtubeHalo3 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
       console.log("youtube url", youtubeHalo3);
@@ -188,7 +192,7 @@ function Halo4Search(){
   }).then(function(data){
 //    console.log("youtube data", data);
 //    console.log("array 0", data.items[0]);
-      console.log("youtube video ID", data.items[0].id);
+//    console.log("youtube video ID", data.items[0].id);
       videoId = 'YoS8i8Rx_uI';
       youtubeHalo4 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
       console.log("youtube url", youtubeHalo4);
@@ -212,7 +216,7 @@ function Halo5Search(){
   }).then(function(data){
  //   console.log("youtube data", data);
  //   console.log("array 0", data.items[0]);
-      console.log("youtube video ID", data.items[0].id);
+ //   console.log("youtube video ID", data.items[0].id);
       videoId = 'Rh_NXwqFvHc';
       youtubeHalo5 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
       console.log("youtube url", youtubeHalo5);
@@ -234,7 +238,7 @@ function Halo6Search(){
   }).then(function(data){
  //   console.log("youtube data", data);
  //   console.log("array 0", data.items[0]);
-      console.log("youtube video ID", data.items[0].id);
+ //   console.log("youtube video ID", data.items[0].id);
       videoId = 'PyMlV5_HRWk';
       youtubeHalo6 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
       console.log("youtube url", youtubeHalo6);
