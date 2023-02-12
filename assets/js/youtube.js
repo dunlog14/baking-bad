@@ -114,12 +114,12 @@ function Halo1Search(){
       // convert json to javascript object
       return rep.json()
   }).then(function(data){
-      console.log("youtube data", data);
-      console.log("array 0", data.items[0]);
+//    console.log("youtube data", data);
+//    console.log("array 0", data.items[0]);
       console.log("youtube video ID", data.items[0].id);
       videoId = 'lie_ysmcQV8';
-      watchyoutube = '<a href=https://www.youtube.com/watch?v='+videoId+'"target="_blank">'+video.snippet.title+'</a>';
-      console.log("youtube url", watchyoutube);
+      youtubeHalo1 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
+      console.log("youtube url", youtubeHalo1);
       
   //   show(data.items);
   })
@@ -138,12 +138,12 @@ function Halo2Search(){
       // convert json to javascript object
       return rep.json()
   }).then(function(data){
-      console.log("youtube data", data);
-      console.log("array 0", data.items[0]);
+//    console.log("youtube data", data);
+//    console.log("array 0", data.items[0]);
       console.log("youtube video ID", data.items[0].id);
       videoId = 'rl5J-rqJa3o';
-      watchyoutube = '<a href=https://www.youtube.com/watch?v='+videoId+'"target="_blank">'+video.snippet.title+'</a>';
-      console.log("youtube url", watchyoutube);
+      youtubeHalo2 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
+      console.log("youtube url", youtubeHalo2);
 
   //   show(data.items);
   })
@@ -162,12 +162,12 @@ function Halo3Search(){
       // convert json to javascript object
       return rep.json()
   }).then(function(data){
-      console.log("youtube data", data);
-      console.log("array 0", data.items[0]);
+//    console.log("youtube data", data);
+//    console.log("array 0", data.items[0]);
       console.log("youtube video ID", data.items[0].id);
       videoId = '_DtftmGZpgE';
-      watchyoutube = '<a href=https://www.youtube.com/watch?v='+videoId+'"target="_blank">'+video.snippet.title+'</a>';
-      console.log("youtube url", watchyoutube);
+      youtubeHalo3 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
+      console.log("youtube url", youtubeHalo3);
 
   //   show(data.items);
   })
@@ -186,12 +186,12 @@ function Halo4Search(){
       // convert json to javascript object
       return rep.json()
   }).then(function(data){
-      console.log("youtube data", data);
-      console.log("array 0", data.items[0]);
+//    console.log("youtube data", data);
+//    console.log("array 0", data.items[0]);
       console.log("youtube video ID", data.items[0].id);
       videoId = 'YoS8i8Rx_uI';
-      watchyoutube = '<a href=https://www.youtube.com/watch?v='+videoId+'"target="_blank">'+video.snippet.title+'</a>';
-      console.log("youtube url", watchyoutube);
+      youtubeHalo4 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
+      console.log("youtube url", youtubeHalo4);
 
   //   show(data.items);
   })
@@ -210,12 +210,12 @@ function Halo5Search(){
       // convert json to javascript object
       return rep.json()
   }).then(function(data){
-      console.log("youtube data", data);
-      console.log("array 0", data.items[0]);
+ //   console.log("youtube data", data);
+ //   console.log("array 0", data.items[0]);
       console.log("youtube video ID", data.items[0].id);
       videoId = 'Rh_NXwqFvHc';
-      watchyoutube = '<a href=https://www.youtube.com/watch?v='+videoId+'"target="_blank">'+video.snippet.title+'</a>';
-      console.log("youtube url", watchyoutube);
+      youtubeHalo5 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
+      console.log("youtube url", youtubeHalo5);
   //   show(data.items);
   })
 }
@@ -232,12 +232,12 @@ function Halo6Search(){
       // convert json to javascript object
       return rep.json()
   }).then(function(data){
-      console.log("youtube data", data);
-      console.log("array 0", data.items[0]);
+ //   console.log("youtube data", data);
+ //   console.log("array 0", data.items[0]);
       console.log("youtube video ID", data.items[0].id);
       videoId = 'PyMlV5_HRWk';
-      watchyoutube = '<a href=https://www.youtube.com/watch?v='+videoId+'"target="_blank">'+video.snippet.title+'</a>';
-      console.log("youtube url", watchyoutube);
+      youtubeHalo6 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
+      console.log("youtube url", youtubeHalo6);
   //   show(data.items);
   })
 }
@@ -252,7 +252,7 @@ function Halo6Search(){
 //      console.log(data.length);
 //      data.forEach(function(video){
 //            console.log(video);
-//     watchyoutube = '<a href=https://www.youtube.com/watch?v='+video.id+'"target="_blank">'+video.snippet.title+'</a>';
+//     watchyoutube = 'https://www.youtube.com/watch?v='+video.id+'"target="_blank"';
 //     console.log("youtube url", watchyoutube);
 //      })
 //}
