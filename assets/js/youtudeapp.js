@@ -1,7 +1,6 @@
-// key : AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU
-// This javascript is the interface to the YouTube v3 Data API for the baking-bad 
-// project. Please merge
 
+// This javascript is the interface to the YouTube v3 Data API for the baking-bad 
+// Project
 // From the Main javascript Halo video game homepage, this code returns the url to 
 // a Official YouTube video trailer for the user selected Halo video game.
 
@@ -20,11 +19,12 @@
 // key 2 AIzaSyCAP-iPzob8qYBirex5NaZNyEAfylpjyBo
 // key 3 AIzaSyD7M47ah46ao1ARQuXkptByS0yCtyLpi_k
 // key 4 AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM
+// Paul's key  AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU
 
 
 // Using YouTube V3 Data API with public data  
 //const api = 'AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM;
-const api = 'AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM';
+const api = 'AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU';
 //console.log(api)
 // take search item from console. comment out code once integrated with project
 
@@ -60,7 +60,7 @@ btns.forEach(function(btn){
 // test url
 
 // Note key is NOT in quotes
-// https://www.googleapis.com/youtube/v3/search/?part=snippet&key=1AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM&q=test'
+// https://www.googleapis.com/youtube/v3/search/?part=snippet&key=AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU&q='halo video game official trailer'&maxResults=5'
 // search YouTube database
 function ySearch(e){
    let search = searchTerm.value;
@@ -68,7 +68,9 @@ function ySearch(e){
    //encodeURlComponent(search);
    // part snippet, api, q=halo, max results 1
    // q is hardcoded with game name
-let url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key='+api+'&q=halo&maxResults=1;AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPMkkip8n1d0Q_OK5E-YDoad89n1zaPM&q=halo';
+   // copied url to web browser to test. it worked!
+   // https://www.youtube.com/embed/PyMlV5_HRWk where last parameter is videoid
+let url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key=AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU&q=halo&maxResults=5';
 output.textContent = url;
 console.log(output.textContent)
 
