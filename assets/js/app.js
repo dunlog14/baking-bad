@@ -2,12 +2,12 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
-
-let rawgKey = '576858f4b6fa477990afac4add5f794f';
+// put private key here
+let rawgKey = '';
 
 function halo1() {
 
-    var oneUrl = 'https://api.rawg.io/api/games/halo-combat-evolved?key=576858f4b6fa477990afac4add5f794f';
+    var oneUrl = `https://api.rawg.io/api/games/halo-combat-evolved?key=${rawgKey}`;
   
     fetch(oneUrl)
       .then(function (response) {
@@ -28,17 +28,13 @@ function halo1() {
 
   function halo2() {
 
-    var twoUrl = 'https://api.rawg.io/api/games/halo-2?key=576858f4b6fa477990afac4add5f794f';
+    var twoUrl = `https://api.rawg.io/api/games/halo-2?key=${rawgKey}`;
   
     fetch(twoUrl)
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data.name);
-        console.log(data.metacritic);
-        console.log(data.description);
-        console.log(data.released);
 
       let twoName = $('.title-2');
         twoName.append(data.name);
@@ -56,20 +52,14 @@ function halo1() {
     
     function halo3() {
 
-        var threeUrl = 'https://api.rawg.io/api/games/halo-3?key=576858f4b6fa477990afac4add5f794f';
+        var threeUrl = `https://api.rawg.io/api/games/halo-3?key=${rawgKey}`;
       
         fetch(threeUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            // console.log(data);
-            console.log(data.name);
-            console.log(data.metacritic);
-            console.log(data.description);
-            console.log(data.released);
 
-            
     let threeName = $('.title-3');
       threeName.append(data.name);
     let threeDescription = $('.game-description-3');
@@ -83,18 +73,13 @@ function halo1() {
 
     function halo4() {
 
-        var fourUrl = 'https://api.rawg.io/api/games/halo-4?key=576858f4b6fa477990afac4add5f794f';
+        var fourUrl = `https://api.rawg.io/api/games/halo-4?key=${rawgKey}`;
       
         fetch(fourUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            // console.log(data);
-            console.log(data.name);
-            console.log(data.metacritic);
-            console.log(data.description);
-            console.log(data.released);
 
     let fourName = $('.title-4');
       fourName.append(data.name);
@@ -109,19 +94,14 @@ function halo1() {
 
     function halo5() {
 
-        var fiveUrl = 'https://api.rawg.io/api/games/halo-5-guardians?key=576858f4b6fa477990afac4add5f794f';
+        var fiveUrl = `https://api.rawg.io/api/games/halo-5-guardians?key=${rawgKey}`;
       
         fetch(fiveUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            // console.log(data);
-            console.log(data.name);
-            console.log(data.metacritic);
-            console.log(data.description);
-            console.log(data.released);
-
+   
     let fiveName = $('.title-5');
       fiveName.append(data.name);
     let fiveDescription = $('.game-description-5');
@@ -135,19 +115,14 @@ function halo1() {
 
     function haloInfinite() {
 
-        var sixUrl = 'https://api.rawg.io/api/games/halo-infinite?key=576858f4b6fa477990afac4add5f794f';
+        var sixUrl = `https://api.rawg.io/api/games/halo-infinite?key=${rawgKey}`;
       
         fetch(sixUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            // console.log(data);
-            console.log(data.name);
-            console.log(data.metacritic);
-            console.log(data.description);
-            console.log(data.released);
-
+    
   let sixName = $('.title-6');
     sixName.append(data.name);
   let sixDescription = $('.game-description-6');
@@ -180,3 +155,49 @@ function StopSound(soundobj) {
     thissound.currentTime = 0;
 };
 
+var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player1;
+      function onYouTubeIframeAPIReady() {
+        player1 = new YT.Player('player1', {
+          height: '390',
+          width: '640',
+          videoId: 'lie_ysmcQV8',
+        });
+        
+        player2 = new YT.Player('player2', {
+            height: '390',
+            width: '640',
+            videoId: 'rl5J-rqJa3o'
+          });
+
+        player3 = new YT.Player('player3', {
+            height: '390',
+            width: '640',
+            videoId: '_DtftmGZpgE'
+          });
+
+        player4 = new YT.Player('player4', {
+            height: '390',
+            width: '640',
+            videoId: 'YoS8i8Rx_uI'
+          });
+
+        player5 = new YT.Player('player5', {
+            height: '390',
+            width: '640',
+            videoId: 'Rh_NXwqFvHc'
+          });
+
+        player6 = new YT.Player('player6', {
+            height: '390',
+            width: '640',
+            videoId: 'PyMlV5_HRWk'
+          });
+      }

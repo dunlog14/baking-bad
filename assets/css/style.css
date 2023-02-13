@@ -55,10 +55,6 @@ h1 {
     z-index: 2;
 }
 
-.collection {
-    display: inline-flex;
-}
-
 
 .waves-effect {
     width: 100% !important;

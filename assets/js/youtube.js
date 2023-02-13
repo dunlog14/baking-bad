@@ -1,3 +1,4 @@
+
 // This javascript is the interface to the YouTube v3 Data API for the baking-bad 
 // Project
 // From the Main javascript Halo video game homepage, this code returns the url to 
@@ -29,7 +30,7 @@
 // console.log("top of script")
 
 
-const api = 'AIzaSyCAP-iPzob8qYBirex5NaZNyEAfylpjyBo';
+const api = 'AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM';
 //console.log("key", api);
 
 // javascript overview v2 (rewritten from first pass)
@@ -116,16 +117,67 @@ function Halo1Search(){
 
   }).then(function(data){
 // convert json array to something javascript can tranverse
-//     const youtubeArray = JSON.parse(data);
-//     console.log("YoutubeArray", youtubeArray);
-//     console.log("youtube data", data);
-//     console.log("array 0", data.items[0]);
-//     console.log("youtube video ID", data.items[0].id);
+    // const youtubeArray = JSON.parse(data);
+    // console.log("YoutubeArray", youtubeArray);
+    // console.log("youtube data", data);
+    // console.log("array 0", data.items[0]);
+    console.log("youtube video ID", data.items[0].id);
       videoId = 'lie_ysmcQV8';
       youtubeHalo1 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
-      console.log("youtube url", youtubeHalo1);
+      // console.log("youtube url", youtubeHalo1);
       
-  //   show(data.items);
+    //  let oneVideo = document.getElementsByClassName('video-1');
+    //   oneVideo.insert.youtubeHalo1;
+    // show(data.items);
+
+    var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      onYouTubeIframeAPIReady();
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'PyMlV5_HRWk',
+          playerVars: {
+            'playsinline': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+        function loadPlayer() {
+          window.onYouTubePlayerAPIReady = function() {
+              onYouTubePlayer();
+      }
+    }};
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+     
   })
 }
 
@@ -149,6 +201,7 @@ function Halo2Search(){
       youtubeHalo2 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
       console.log("youtube url", youtubeHalo2);
 
+     
   //   show(data.items);
   })
 }
