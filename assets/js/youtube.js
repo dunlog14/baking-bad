@@ -19,17 +19,22 @@
 // key 3 AIzaSyD7M47ah46ao1ARQuXkptByS0yCtyLpi_k
 // key 4 AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM
 // Paul's key  AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU
+// Logan's key AIzaSyA71KTgIuwBi7iBn1kDpSn3iQwa-lc1wW8
 
 // Keys have quotas associated with them. I don't expect to run out of my daily quota, but if I do
 // quota is reset every day at midnight.
 // if quota is an issue, a form can be filled out to request more quota. Turn around on form is 
 // 24 hours
+// Projects that enable the YouTube Data API have a default quota allocation of 10,000 units 
+// per day, an amount sufficient for the overwhelming majority of our API users.
 // Using YouTube V3 Data API with public data  
 //const api = 'AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM;
 // console.log("top of script")
 
 
-const api = 'AIzaSyCAP-iPzob8qYBirex5NaZNyEAfylpjyBo';
+ const api = 'AIzaSyCAP-iPzob8qYBirex5NaZNyEAfylpjyBo';
+//const api = 'AIzaSyA71KTgIuwBi7iBn1kDpSn3iQwa-lc1wW8';
+
 //console.log("key", api);
 
 // javascript overview v2 (rewritten from first pass)
@@ -102,9 +107,10 @@ const testurl = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key=
 
 
 // Halo Combat Evolved (aka Halo 1) Search and Fetch
-searchq = 'halo combat evolved full game'
+
 
 function Halo1Search(){
+      searchq = 'halo combat evolved full game'
       const url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key='+api+'&q='+searchq+'&maxResults=1';
       // part snippet, api, q=halo, max results 1
       // q is in "" not ''
@@ -120,19 +126,21 @@ function Halo1Search(){
 //     console.log("YoutubeArray", youtubeArray);
 //     console.log("youtube data", data);
 //     console.log("array 0", data.items[0]);
-//     console.log("youtube video ID", data.items[0].id);
-      videoId = 'lie_ysmcQV8';
+ //      console.log("videoID", data.items[0]['id']['videoId']);
+
+//      videoId = 'lie_ysmcQV8'
+      videoId = data.items[0]['id']['videoId'];
+ //   console.log("videoId", videoId);
       youtubeHalo1 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
-      console.log("youtube url", youtubeHalo1);
-      
-  //   show(data.items);
+ //     console.log("Halo1 youtube url", youtubeHalo1);    
   })
 }
 
 // Halo 2 Search and Fetch
-searchq = 'halo 2 full campaign and cutsenses'
+
 
 function Halo2Search(){
+      searchq = 'halo 2 full campaign and cutscenes'
       const url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key='+api+'&q='+searchq+'&maxResults=1';
       // part snippet, api, q=halo, max results 1
       // q is in "" not ''
@@ -145,18 +153,19 @@ function Halo2Search(){
 //    console.log("youtube data", data);
 //    console.log("array 0", data.items[0]);
 //    console.log("youtube video ID", data.items[0].id);
-      videoId = 'rl5J-rqJa3o';
+//    videoId = 'rl5J-rqJa3o';
+      videoId = data.items[0]['id']['videoId'];
       youtubeHalo2 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
-      console.log("youtube url", youtubeHalo2);
+ //     console.log("Halo 2 youtube url", youtubeHalo2);
 
-  //   show(data.items);
   })
 }
 
 // Halo 3 Search and Fetch
-searchq = 'halo 3 pc halo: the master chief collection'
+
 
 function Halo3Search(){
+      searchq = 'halo 3 pc halo: the master chief collection'
       const url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key='+api+'&q='+searchq+'&maxResults=1';
       // part snippet, api, q=halo, max results 1
       // q is in "" not ''
@@ -168,10 +177,11 @@ function Halo3Search(){
   }).then(function(data){
 //    console.log("youtube data", data);
 //    console.log("array 0", data.items[0]);
-//     console.log("youtube video ID", data.items[0].id);
-      videoId = '_DtftmGZpgE';
+//    console.log("youtube video ID", data.items[0].id);
+//    videoId = '_DtftmGZpgE';
+      videoId = data.items[0]['id']['videoId'];
       youtubeHalo3 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
-      console.log("youtube url", youtubeHalo3);
+//      console.log("Halo 3 youtube url", youtubeHalo3);
 
   //   show(data.items);
   })
@@ -193,19 +203,20 @@ function Halo4Search(){
 //    console.log("youtube data", data);
 //    console.log("array 0", data.items[0]);
 //    console.log("youtube video ID", data.items[0].id);
-      videoId = 'YoS8i8Rx_uI';
+//    videoId = 'YoS8i8Rx_uI';
+      videoId = data.items[0]['id']['videoId'];
       youtubeHalo4 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
-      console.log("youtube url", youtubeHalo4);
+ //     console.log("Halo 4 youtube url", youtubeHalo4);
 
-  //   show(data.items);
   })
 }
 
 // Halo5 Search and Fetch
-searchq = 'halo infinite cmpaign launch trailer'
+
 
 function Halo5Search(){
-      const url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key='+api+'&q='+searchq+'&maxResults=1';
+  searchq = 'halo infinite cmpaign launch trailer'
+  const url = 'https://www.googleapis.com/youtube/v3/search/?part=snippet&key='+api+'&q='+searchq+'&maxResults=1';
       // part snippet, api, q=halo, max results 1
       // q is in "" not ''
       
@@ -217,10 +228,11 @@ function Halo5Search(){
  //   console.log("youtube data", data);
  //   console.log("array 0", data.items[0]);
  //   console.log("youtube video ID", data.items[0].id);
-      videoId = 'Rh_NXwqFvHc';
+//    videoId = 'Rh_NXwqFvHc';
+      videoId = data.items[0]['id']['videoId'];
       youtubeHalo5 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
-      console.log("youtube url", youtubeHalo5);
-  //   show(data.items);
+ //     console.log("Halo 5 youtube url", youtubeHalo5);
+
   })
 }
 
@@ -239,10 +251,11 @@ function Halo6Search(){
  //   console.log("youtube data", data);
  //   console.log("array 0", data.items[0]);
  //   console.log("youtube video ID", data.items[0].id);
-      videoId = 'PyMlV5_HRWk';
+//    videoId = 'PyMlV5_HRWk';
+      videoId = data.items[0]['id']['videoId'];
       youtubeHalo6 = 'https://www.youtube.com/watch?v='+videoId+'"target="_blank"';
-      console.log("youtube url", youtubeHalo6);
-  //   show(data.items);
+  //    console.log("Halo 6 youtube url", youtubeHalo6);
+
   })
 }
 
