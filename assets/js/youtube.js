@@ -18,8 +18,7 @@
 // key 2 AIzaSyCAP-iPzob8qYBirex5NaZNyEAfylpjyBo
 // key 3 AIzaSyD7M47ah46ao1ARQuXkptByS0yCtyLpi_k
 // key 4 AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM
-// Paul's key  AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU
-// Logan's key AIzaSyA71KTgIuwBi7iBn1kDpSn3iQwa-lc1wW8
+
 
 // Keys have quotas associated with them. I don't expect to run out of my daily quota, but if I do
 // quota is reset every day at midnight.
@@ -33,7 +32,7 @@
 
 
  const api = 'AIzaSyCAP-iPzob8qYBirex5NaZNyEAfylpjyBo';
-//const api = 'AIzaSyA71KTgIuwBi7iBn1kDpSn3iQwa-lc1wW8';
+
 
 //console.log("key", api);
 
