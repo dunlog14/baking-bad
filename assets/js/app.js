@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('.modal').modal();
+    $('.carousel').carousel();
   });
 
 // put private key here
