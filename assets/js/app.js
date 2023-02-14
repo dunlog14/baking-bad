@@ -147,3 +147,13 @@ function StopSound(soundobj) {
     thissound.currentTime = 0;
 };
 
+
+// carousel functions
+
+$(document).ready(function(){
+  $('.carousel').carousel({
+    padding: 350, shift: 50, shift: 100, duration: 50
+  });
+}); 
+    
+
