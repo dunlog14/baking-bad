@@ -3,8 +3,19 @@
     padding: 0;
 }
 
+
+img {
+    width: 250px;
+    align-items: center;
+}
+
+.foot-logo {
+    width: 400;
+}
+
+
 nav.header {
-    color:#fff;
+    color:#ffffff;
     min-height: 110vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 15, 20, 0.6), rgba(4, 10, 20, 0.6)), url("../images/hero.gif");
@@ -19,6 +30,8 @@ h1 {
     right: 200px;
     top: 100px;
 }
+
+
 
 .head-logo {
     height: 200px;
@@ -40,7 +53,7 @@ h1 {
     top: 500px;
     font-size: 26px;
     font-weight: 800;
-    color: white;
+    color: rgb(71, 43, 43);
     font-family: 'Julius Sans One', sans-serif;
     width: 400px;
     
@@ -54,7 +67,6 @@ h1 {
     width: 20px;
     z-index: 2;
 }
-
 
 .waves-effect {
     width: 100% !important;
@@ -73,3 +85,13 @@ h1 {
 .grow:hover {
     transform: scale(1.1);
 }
+
+h5 { 
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 980px){
+    img {
+        width: 200px;}
+    }
