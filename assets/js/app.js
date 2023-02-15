@@ -1,6 +1,9 @@
 $(document).ready(function(){
     $('.modal').modal();
-    $('.carousel').carousel();
+    $('.carousel').carousel({
+      padding: 350,
+    }
+    );
   });
 
 // put private key here
@@ -135,12 +138,22 @@ function halo1() {
      });
       }
 
+      function welcomeText() {
+        let introPEl = document.getElementById('intro');
+        let introText = document.createTextNode('Welcome to our super halo fan club. We accept venmo, cash app, zelle, and much more!');
+        introPEl.appendChild(introText);
+        introPEl.style.color = 'white';
+        introPEl.style.textAlign = 'center';
+        introPEl.style.fontSize = 'large';
+      }
+      
     halo1();
     halo2();
     halo3();
     halo4();
     halo5();
     haloInfinite();
+    welcomeText();
 
 // function to play theme song (EASTER EGG)
 function PlaySound(soundobj) {
