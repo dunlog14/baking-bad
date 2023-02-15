@@ -27,4 +27,7 @@ Find the Easter Egg...
 hint: OOOOOOOH OOOOOOOH OOOOOOOH OOH, OOOOOOOOOOH OOOOH OOOH OH OH OH
 
 ## Images
+
 ![img](../v-day/assets/images/readme-deployed.gif)
+![img](../v-day/assets/images/hero.png)
+![img](../v-day/assets/images/carousel.png)
