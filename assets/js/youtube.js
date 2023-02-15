@@ -15,9 +15,7 @@
     // using inspect. Therefore, key should be restricted to 
     // make it less attractive to someone stealing it
 
-// key 2 AIzaSyCAP-iPzob8qYBirex5NaZNyEAfylpjyBo
-// key 3 AIzaSyD7M47ah46ao1ARQuXkptByS0yCtyLpi_k
-// key 4 AIzaSyDY8Ekkip8n1d0Q_OK5E-YDoad89n1zaPM
+
 
 
 // Keys have quotas associated with them. I don't expect to run out of my daily quota, but if I do
