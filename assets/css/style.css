@@ -68,26 +68,18 @@ h1 {
     z-index: 2;
 }
 
-.collection {
-    display: inline-flex;
-}
-
-.grid-item {
-    display: grid;
-    column-gap: 0px;
-  }
-
 .waves-effect {
     width: 100% !important;
     height:100% !important;
 }
 
 .s1 {
-    display: inline-block;
+    display: inline-flex;
+    background-image: url('../images/halo-ring.jpg');
 }
 
 .grow {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .grow:hover {

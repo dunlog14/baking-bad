@@ -1,130 +1,139 @@
 $(document).ready(function(){
     $('.modal').modal();
+    $('.carousel').carousel();
   });
 
-let rawgKey = '576858f4b6fa477990afac4add5f794f';
+// put private key here
+let rawgKey = '';
 
 function halo1() {
-    let youtubeUrl = `https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyC3ADAar5yeEMo-GijNtQXd9rQ51fM9NGU
-    &part=snippet,contentDetails,statistics,status`;
 
-    var requestUrl = 'https://api.rawg.io/api/games/halo-combat-evolved?key=576858f4b6fa477990afac4add5f794f';
+    var oneUrl = `https://api.rawg.io/api/games/halo-combat-evolved?key=${rawgKey}`;
   
-    fetch(requestUrl)
+    fetch(oneUrl)
       .then(function (response) {
         return response.json();
       })
-      .then(function (data) {
-        console.log(data);
-        console.log(data.name);
-        console.log(data.metacritic);
-        console.log(data.description);
-        console.log(data.released);
-
-    let oneHead = $('.one');
+      .then(function (data) {      
+    let oneName = $('.title-1');
+      oneName.append(data.name);
     let oneDescription = $('.game-description-1');
-    let oneVideo = $('.video');
- 
-    let oneTitle = data.name;
-        oneHead.append(oneTitle);
-    let oneAbout = data.description;
-        oneDescription.append(oneAbout);
-    let oneYouTube = video.list;
-  
-        
-});
+      oneDescription.append(data.description);
+    let oneMeta = $('.meta-1')
+      oneMeta.append(data.metacritic);
+    let oneRelease = $('.release-1')
+        oneRelease.append(data.released);
+      });
 }
 
 
   function halo2() {
 
-    var requestUrl = 'https://api.rawg.io/api/games/halo-2?key=576858f4b6fa477990afac4add5f794f';
+    var twoUrl = `https://api.rawg.io/api/games/halo-2?key=${rawgKey}`;
   
-    fetch(requestUrl)
+    fetch(twoUrl)
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
-        // console.log(data);
-        console.log(data.name);
-        console.log(data.metacritic);
-        console.log(data.description);
-        console.log(data.released);
 
+      let twoName = $('.title-2');
+        twoName.append(data.name);
+      let twoDescription = $('.game-description-2');
+        twoDescription.append(data.description);
+      let twoMeta = $('.meta-2')
+        twoMeta.append(data.metacritic);
+      let twoRelease = $('.release-2')
+        twoRelease.append(data.released);
+});  
 
-});
 
 }     
 
     
     function halo3() {
 
-        var requestUrl = 'https://api.rawg.io/api/games/halo-3?key=576858f4b6fa477990afac4add5f794f';
+        var threeUrl = `https://api.rawg.io/api/games/halo-3?key=${rawgKey}`;
       
-        fetch(requestUrl)
+        fetch(threeUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            // console.log(data);
-            console.log(data.name);
-            console.log(data.metacritic);
-            console.log(data.description);
-            console.log(data.released);
+
+    let threeName = $('.title-3');
+      threeName.append(data.name);
+    let threeDescription = $('.game-description-3');
+      threeDescription.append(data.description);
+    let threeMeta = $('.meta-3')
+      threeMeta.append(data.metacritic);
+    let threeRelease = $('.release-3')
+      threeRelease.append(data.released);
     });
-    }     
+    }   
 
     function halo4() {
 
-        var requestUrl = 'https://api.rawg.io/api/games/halo-4?key=576858f4b6fa477990afac4add5f794f';
+        var fourUrl = `https://api.rawg.io/api/games/halo-4?key=${rawgKey}`;
       
-        fetch(requestUrl)
+        fetch(fourUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            // console.log(data);
-            console.log(data.name);
-            console.log(data.metacritic);
-            console.log(data.description);
-            console.log(data.released);
+
+    let fourName = $('.title-4');
+      fourName.append(data.name);
+    let fourDescription = $('.game-description-4');
+      fourDescription.append(data.description);
+    let fourMeta = $('.meta-4')
+      fourMeta.append(data.metacritic);
+    let fourRelease = $('.release-4')
+      fourRelease.append(data.released);
     });
     }     
 
     function halo5() {
 
-        var requestUrl = 'https://api.rawg.io/api/games/halo-5-guardians?key=576858f4b6fa477990afac4add5f794f';
+        var fiveUrl = `https://api.rawg.io/api/games/halo-5-guardians?key=${rawgKey}`;
       
-        fetch(requestUrl)
+        fetch(fiveUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            // console.log(data);
-            console.log(data.name);
-            console.log(data.metacritic);
-            console.log(data.description);
-            console.log(data.released);
+   
+    let fiveName = $('.title-5');
+      fiveName.append(data.name);
+    let fiveDescription = $('.game-description-5');
+      fiveDescription.append(data.description);
+    let fiveMeta = $('.meta-5')
+      fiveMeta.append(data.metacritic);
+    let fiveRelease = $('.release-5')
+      fiveRelease.append(data.released);
     });
     }     
 
     function haloInfinite() {
 
-        var requestUrl = 'https://api.rawg.io/api/games/halo-infinite?key=576858f4b6fa477990afac4add5f794f';
+        var sixUrl = `https://api.rawg.io/api/games/halo-infinite?key=${rawgKey}`;
       
-        fetch(requestUrl)
+        fetch(sixUrl)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            // console.log(data);
-            console.log(data.name);
-            console.log(data.metacritic);
-            console.log(data.description);
-            console.log(data.released);
-
-          });
-        }
+    
+  let sixName = $('.title-6');
+    sixName.append(data.name);
+  let sixDescription = $('.game-description-6');
+    sixDescription.append(data.description);
+  let sixMeta = $('.meta-6')
+    sixMeta.append(data.metacritic);
+  let sixRelease = $('.release-6')
+    sixRelease.append(data.released);
+     });
+      }
 
     halo1();
     halo2();
@@ -148,12 +157,50 @@ function StopSound(soundobj) {
 };
 
 
-// carousel functions
+var tag = document.createElement('script');
 
-$(document).ready(function(){
-  $('.carousel').carousel({
-    padding: 350, shift: 50, shift: 100, duration: 50
-  });
-}); 
-    
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player1;
+      function onYouTubeIframeAPIReady() {
+        player1 = new YT.Player('player1', {
+          height: '390',
+          width: '640',
+          videoId: 'lie_ysmcQV8',
+        });
+        
+        player2 = new YT.Player('player2', {
+            height: '390',
+            width: '640',
+            videoId: 'rl5J-rqJa3o'
+          });
+
+        player3 = new YT.Player('player3', {
+            height: '390',
+            width: '640',
+            videoId: '_DtftmGZpgE'
+          });
+
+        player4 = new YT.Player('player4', {
+            height: '390',
+            width: '640',
+            videoId: 'YoS8i8Rx_uI'
+          });
+
+        player5 = new YT.Player('player5', {
+            height: '390',
+            width: '640',
+            videoId: 'Rh_NXwqFvHc'
+          });
+
+        player6 = new YT.Player('player6', {
+            height: '390',
+            width: '640',
+            videoId: 'PyMlV5_HRWk'
+          });
+      }
 
