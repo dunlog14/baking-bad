@@ -46,24 +46,18 @@ h1 {
     
 }
 
-.easter-egg {
-    position: absolute;
-    top:5px;
-    left: 5px;
-    height: 20px;
-    width: 20px;
-    z-index: 2;
+a img {
+    border-radius: 15px;
+    height: 400px !important;
+    width: 250px !important;
 }
 
-
-.waves-effect {
-    width: 100% !important;
-    height:100% !important;
-}
-
-.s1 {
-    display: inline-flex;
-    background-image: url('../images/halo-ring.jpg');
+.carousel {
+    margin: -30px 0px 0px 0px;
+    background-image: linear-gradient(rgba(4, 15, 20, 0.6), rgba(4, 10, 20, 0.6)), url('../images/High_resolution_wallpaper_background_ID_77700692958.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px !important;
 }
 
 .grow {
