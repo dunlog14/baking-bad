@@ -6,8 +6,8 @@ $(document).ready(function(){
     );
   });
 
-// put private key here
-let rawgKey = '';
+// put public-private key here
+let rawgKey = '858ed5c8af12464f82e173b5ad465e8c';
 
 function halo1() {
 
@@ -23,9 +23,9 @@ function halo1() {
     let oneDescription = $('.game-description-1');
       oneDescription.append(data.description);
     let oneMeta = $('.meta-1')
-      oneMeta.append(data.metacritic);
-    let oneRelease = $('.release-1')
-        oneRelease.append(data.released);
+      oneMeta.append `<strong>Metacritic Rating:</strong> ${(data.metacritic)}`;
+    let oneRelease = $('.release-1');
+        oneRelease.append `<strong>Release Date:</strong> ${(data.released)}`;
       });
 }
 
@@ -45,9 +45,9 @@ function halo1() {
       let twoDescription = $('.game-description-2');
         twoDescription.append(data.description);
       let twoMeta = $('.meta-2')
-        twoMeta.append(data.metacritic);
+        twoMeta.append `<strong>Metacritic Rating:</strong> ${(data.metacritic)}`;
       let twoRelease = $('.release-2')
-        twoRelease.append(data.released);
+        twoRelease.append `<strong>Release Date:</strong> ${(data.released)}`;
 });  
 
 
@@ -69,9 +69,9 @@ function halo1() {
     let threeDescription = $('.game-description-3');
       threeDescription.append(data.description);
     let threeMeta = $('.meta-3')
-      threeMeta.append(data.metacritic);
+      threeMeta.append `<strong>Metacritic Rating:</strong> ${(data.metacritic)}`;
     let threeRelease = $('.release-3')
-      threeRelease.append(data.released);
+      threeRelease.append `<strong>Release Date:</strong> ${(data.released)}`;
     });
     }   
 
@@ -90,9 +90,9 @@ function halo1() {
     let fourDescription = $('.game-description-4');
       fourDescription.append(data.description);
     let fourMeta = $('.meta-4')
-      fourMeta.append(data.metacritic);
+      fourMeta.append `<strong>Metacritic Rating:</strong> ${(data.metacritic)}`;
     let fourRelease = $('.release-4')
-      fourRelease.append(data.released);
+      fourRelease.append `<strong>Release Date:</strong> ${(data.released)}`;
     });
     }     
 
@@ -111,9 +111,9 @@ function halo1() {
     let fiveDescription = $('.game-description-5');
       fiveDescription.append(data.description);
     let fiveMeta = $('.meta-5')
-      fiveMeta.append(data.metacritic);
+      fiveMeta.append `<strong>Metacritic Rating:</strong> ${(data.metacritic)}`;
     let fiveRelease = $('.release-5')
-      fiveRelease.append(data.released);
+      fiveRelease.append `<strong>Release Date:</strong> ${(data.released)}`;
     });
     }     
 
@@ -132,19 +132,20 @@ function halo1() {
   let sixDescription = $('.game-description-6');
     sixDescription.append(data.description);
   let sixMeta = $('.meta-6')
-    sixMeta.append(data.metacritic);
+    sixMeta.append `<strong>Metacritic Rating:</strong> ${(data.metacritic)}`;
   let sixRelease = $('.release-6')
-    sixRelease.append(data.released);
+    sixRelease.append `<strong>Release Date:</strong> ${(data.released)}`;
      });
       }
 
       function welcomeText() {
         let introPEl = document.getElementById('intro');
-        let introText = document.createTextNode('Welcome to our super halo fan club. We accept venmo, cash app, zelle, and much more!');
+        let introText = document.createTextNode('Welcome to Halo Origins! Click on a game banner below to learn more.');
         introPEl.appendChild(introText);
         introPEl.style.color = 'white';
         introPEl.style.textAlign = 'center';
-        introPEl.style.fontSize = 'large';
+        introPEl.style.fontSize = '30px';
+        introPEl.style.paddingTop = '100px';
       }
       
     halo1();
